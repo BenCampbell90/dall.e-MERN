@@ -26,7 +26,6 @@ const Home = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          mode: 'no-cors', // Temporary workaround
         });
 
         if (response.ok) {
