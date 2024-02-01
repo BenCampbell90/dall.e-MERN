@@ -10,6 +10,11 @@ dotenv.config();
 
 const app = express();
 app.use(cors());
+
+// Handle preflight requests for specific routes
+app.options('/api/v1/post/:id', cors());
+app.options('/api/v1/dalle/:id', cors());
+
 app.use(express.json({ limit: '50mb' }));
 
 app.use('/api/v1/post', postRoutes);
