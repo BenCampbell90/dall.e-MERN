@@ -4,11 +4,23 @@
   "routes": [
     {
       "src": "/api/v1/post/(.*)",
-      "dest": "/api/v1/post/"
+      "dest": "/api/v1/post/",
+      "methods": ["OPTIONS", "GET", "POST", "PUT", "DELETE"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS, GET, POST, PUT, DELETE",
+        "Access-Control-Allow-Headers": "Content-Type"
+      }
     },
     {
       "src": "/api/v1/dalle/(.*)",
-      "dest": "/api/v1/dalle/"
+      "dest": "/api/v1/dalle/",
+      "methods": ["OPTIONS", "GET", "POST", "PUT", "DELETE"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS, GET, POST, PUT, DELETE",
+        "Access-Control-Allow-Headers": "Content-Type"
+      }
     }
   ]
 }
