@@ -22,7 +22,7 @@ const CreatePost = () => {
       setIsLoading(true);
 
       try {
-        const response = await fetch('https://dall-e-backend-six.vercel.app/api/v1/post', {
+        const response = await fetch('https://dall-e-backend-six.vercel.app/post', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ const CreatePost = () => {
     if (form.prompt) {
       try {
         setIsGeneratingImg(true);
-        const response = await fetch('https://dall-e-backend-six.vercel.app/api/v1/dalle', {
+        const response = await fetch('https://dall-e-backend-six.vercel.app/dalle', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
